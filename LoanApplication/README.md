@@ -31,7 +31,9 @@ User should be authenticated to access loan and customer endpoints.
 
 1-  To be able to authenticate, user should be signed up first.
 To signup , user should send a POST request to /signup endpoint with username and password in the request body.
+
  http://localhost:8080/api/auth/signup
+ 
        POST:  
         {   
         "username" : "admin1",
@@ -42,11 +44,14 @@ To signup , user should send a POST request to /signup endpoint with username an
         
 2- Already authenticated user should send a POST request to /signin endpoint with username and password in the request body.
     Signin endpoint provides a JWT token which should be used in the header of the request as Baarer Authentication in order to access loan and customer endpoints.
+    
     http://localhost:8080/api/auth/signin
+    
       POST:  {
         "username" : "admin1",
         "password" : "123456"
           }
+          
     Response: {
             "jwt": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3Mzk3MTYzNzQsImV4cCI6MTczOTgwMjc3NH0.UWPIl4UGj2o1uES5nDq7v6CGtYq8DD5YX0sm1xUKOyI"
             }
@@ -56,24 +61,30 @@ To signup , user should send a POST request to /signup endpoint with username an
     To create a customer, user should send a POST request to /customers endpoint with customer information in the request body.
     Never forget jwt token in the header of the request as Baarer Authentication.
     Creation can be done just  users that have ADMIN role.
+    
     http://localhost:8080/api/customers
+    
     POST: {
           "name" : "murat",
          "surname" : "ballıkaya",
          "creditLimit" : 100000,
          "userCreditLimit" : 0
         }
+        
      Response: {
         "username": "22",
         "password": "6RQyc88jv8"
         } 
+        
     Response includes username and password which will be used to be signed in as a USER role.
 
 
 
 4- Create loan endpoint is available for users that have USER or ADMIN role.
+
     To create a loan, user should send a POST request to /loans endpoint with loan information in the request body.
     Never forget jwt token in the header of the request as Baarer Authentication.
+    
     http://localhost:8080/api/loan/create
     POST: {
         "customerId" : 22,
@@ -85,7 +96,9 @@ To signup , user should send a POST request to /signup endpoint with username an
 
         
 5-  You are able to list loans by following endpoint:
+
         http://localhost:8080/api/loan/list
+        
     GET: 
     Response: [
             {
@@ -97,6 +110,7 @@ To signup , user should send a POST request to /signup endpoint with username an
                 "status": "APPROVED"
             }
             ]
+            
 Response: [
         {
         "id": 12,
@@ -117,7 +131,9 @@ Response: [
 
         
 6-  You are able to pay installments via following endpoint:
+
     http://localhost:8080/api/loan/pay
+    
       POST:  {
         "loanId" : 12,
         "amount" : 10000
