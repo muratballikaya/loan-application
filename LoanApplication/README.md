@@ -60,7 +60,9 @@ To signup , user should send a POST request to /signup endpoint with username an
 3- Customer should be created first. 
     To create a customer, user should send a POST request to /customers endpoint with customer information in the request body.
     Never forget jwt token in the header of the request as Baarer Authentication.
-    Creation can be done just  users that have ADMIN role.
+
+   NOTE:  Creation can be done just  users that have ADMIN role.
+      ROLE : ADMIN
     
     http://localhost:8080/api/customers
     
@@ -78,12 +80,14 @@ To signup , user should send a POST request to /signup endpoint with username an
         
     Response includes username and password which will be used to be signed in as a USER role.
 
+IMPORTANT NOTE : Customer is automatically signed up with USER role when creation was completed. If signed in by username/ password that have been received from endpoint, user will be able to just acces endpoints that are authorized for USER role. 
 
 
-4- Create loan endpoint is available for users that have USER or ADMIN role.
 
-    To create a loan, user should send a POST request to /loans endpoint with loan information in the request body.
+4- To create a loan, user should send a POST request to /loans endpoint with loan information in the request body.
     Never forget jwt token in the header of the request as Baarer Authentication.
+
+    ROLE : ADMIN/USER
     
     http://localhost:8080/api/loan/create
     POST: {
@@ -96,6 +100,8 @@ To signup , user should send a POST request to /signup endpoint with username an
 
         
 5-  You are able to list loans by following endpoint:
+
+   ROLE : ADMIN/USER
 
         http://localhost:8080/api/loan/list
         
@@ -131,6 +137,8 @@ Response: [
 
         
 6-  You are able to pay installments via following endpoint:
+
+   ROLE : ADMIN/USER
 
     http://localhost:8080/api/loan/pay
     
