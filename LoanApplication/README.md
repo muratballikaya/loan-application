@@ -21,12 +21,14 @@ docker run -p 8080:8080 loan-application
 
 4- Access the application: Open a web browser and go to http://localhost:8080 to see the application running.
 
-Postman Collections have been sent you via email.
+NOTE: Postman Collections are as attached.
 
 
 Loan Application API copmosed of authentication and loan endpoints.
 
 User should be authenticated to access loan and customer endpoints.
+
+
 1-  To be able to authenticate, user should be signed up first.
 To signup , user should send a POST request to /signup endpoint with username and password in the request body.
  http://localhost:8080/api/auth/signup
