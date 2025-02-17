@@ -4,7 +4,8 @@ Docker image is available at Docker Hub. You can pull the image with the followi
 docker image pull muratballikaya/loan-application:latest
 
 
-Once you have source code, you can run the application with the following commands
+Once you have source code, you can run the application with the following commands.
+
 Source code is available at
 
 https://github.com/muratballikaya/loan-application
