@@ -66,7 +66,8 @@ To signup , user should send a POST request to /signup endpoint with username an
     Never forget jwt token in the header of the request as Baarer Authentication.
 
    NOTE:  Creation can be done just  users that have ADMIN role.
-      ROLE : ADMIN
+   
+    ROLE : ADMIN
     
     http://localhost:8080/api/customers
     
@@ -105,9 +106,9 @@ IMPORTANT NOTE : Customer is automatically signed up with USER role when creatio
         
 5-  You are able to list loans by following endpoint:
 
-   ROLE : ADMIN/USER
+    ROLE : ADMIN/USER
 
-        http://localhost:8080/api/loan/list
+    http://localhost:8080/api/loan/list
         
     GET: 
     Response: [
@@ -142,7 +143,7 @@ Response: [
         
 6-  You are able to pay installments via following endpoint:
 
-   ROLE : ADMIN/USER
+    ROLE : ADMIN/USER
 
     http://localhost:8080/api/loan/pay
     
