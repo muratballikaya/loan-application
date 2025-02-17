@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.*;
 
 
 @CrossOrigin(origins = "*", maxAge = 3600)
-//for Angular Client (withCredentials)
-//@CrossOrigin(origins = "http://localhost:8081", maxAge = 3600, allowCredentials="true")
 @RestController
 @RequestMapping("/api/customer")
 public class CustomerController {
