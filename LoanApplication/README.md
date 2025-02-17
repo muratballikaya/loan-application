@@ -46,7 +46,7 @@ To signup , user should send a POST request to /signup endpoint with username an
         }
 
         
-2- Already authenticated user should send a POST request to /signin endpoint with username and password in the request body.
+2- Already signed-up user should send a POST request to /signin endpoint with username and password in the request body.
     Signin endpoint provides a JWT token which should be used in the header of the request as Baarer Authentication in order to access loan and customer endpoints.
     
     http://localhost:8080/api/auth/signin
