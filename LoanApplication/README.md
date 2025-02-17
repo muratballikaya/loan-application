@@ -1,10 +1,17 @@
-Docker image is available at Docker Hub. You can pull the image with the following command:
+
+LOAN APPLICATION WITH AUTHENTICATON
+
+DOCKER IMAGES:
+
+Docker image is available at Docker Hub. You can pull and run the image with the following commands:
 
 
-docker image pull muratballikaya/loan-application:latest
+    docker image pull muratballikaya/loan-application:latest
+
+    docker run -p 8080:8080 muratballikaya/loan-application
 
 
-Once you have source code, you can run the application with the following commands.
+If you would like to, you can get source code and build docker image following steps specified below:
 
 Source code is available at
 
@@ -26,6 +33,8 @@ https://github.com/muratballikaya/loan-application
 4- Access the application: Open a web browser and go to http://localhost:8080 to see the application running.
 
 NOTE: Postman Collections are as attached.
+
+ENDPOINTS:
 
 
 Loan Application API copmosed of authentication and loan endpoints.
