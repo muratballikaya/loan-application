@@ -21,7 +21,7 @@ https://github.com/muratballikaya/loan-application
 
 3- Run the Docker container: Start a container from the Docker image.  
 
-docker run -p 8080:8080 loan-application
+    docker run -p 8080:8080 loan-application
 
 4- Access the application: Open a web browser and go to http://localhost:8080 to see the application running.
 
