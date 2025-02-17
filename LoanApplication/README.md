@@ -32,11 +32,15 @@ Loan Application API copmosed of authentication and loan endpoints.
 
 User should be authenticated to access loan and customer endpoints.
 
+NOTE: Swagger documentatin is located at : 
+
+    http://localhost:8080/swagger-ui/index.html
+
 
 1-  To be able to authenticate, user should be signed up first.
 To signup , user should send a POST request to /signup endpoint with username and password in the request body.
 
- http://localhost:8080/api/auth/signup
+     http://localhost:8080/api/auth/signup
  
        POST:  
         {   
